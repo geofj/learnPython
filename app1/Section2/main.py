@@ -1,3 +1,5 @@
+# Getting user inputs
+
 user_prompt = "Enter a todo: "
 # variable user_prompt holds the string
 text = input(user_prompt)
