@@ -5,7 +5,7 @@ todos = []
 
 while True:
 # creates a loop operation based on the True boolean
-    start_action = input("Would you like to add or show list: ")
+    start_action = input("Would you like to add, show or exit: ")
     # user input of 'add' or 'show' to guide the user into a match case for either options
 
     match start_action:
@@ -19,3 +19,9 @@ while True:
         # second case will show the newly appended list
             print(todos)
             # prints the newly appended todos list
+        case 'exit':
+        # third case will exit the loop
+            break
+
+print("Thanks for using the todo list. Bye!")
+# good bye message
