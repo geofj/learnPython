@@ -9,8 +9,16 @@
 # new = elements[1]
 # print(elements)
 
-elements = ['a', 'b', 'c']
-new = 'x'
-elements[1] = new
+# elements = ['a', 'b', 'c']
+# new = 'x'
+# elements[1] = new
 # new variable appends index 1 of elements list
-print(elements)
+# print(elements)
+
+colors = ['blue', 'green', 'yellow']
+color = input('Which color would you like to modify? blue, green, or yellow: ')
+new = colors.index(color)
+colors_new = input('Which color would you like to add in: ')
+colors[new] = colors_new
+# new variable appends index 1 of elements list
+print(colors)
