@@ -8,4 +8,4 @@ essay = open('essay.txt', 'r')
 content = essay.read()
 # read the text file
 print(content.title())
-# print the contents of text file using title method to capitalize the first letter of each word
+# print the contents of text file using title method to capitalize the first letter of thw words
