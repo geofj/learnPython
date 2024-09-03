@@ -1,11 +1,11 @@
-# Improve the program output using fstrings
+# Add to-do "completed" feature
 
 todos = []
 # empty list to store todos to be printed
 
 while True:
 # creates a loop operation based on the True boolean
-    start_action = input("Would you like to add, show, edit or exit: ")
+    start_action = input("Would you like to add, show, edit, complete or exit: ")
     # user input of 'add', 'show', 'edit' or 'exit' to guide the user into a match case for either options
     start_action = start_action.strip()
     # strip function allows accidental whitespace after the start user input
@@ -21,18 +21,21 @@ while True:
         # second case will show the newly appended list
             for index, item in enumerate(todos):
             # added an enumerate function to the for-loop to assign numbers to our todos
-                print(f"{index}-{item}")
+                print(f"{index + 1}-{item}")
                 # prints the newly appended todos list and assigned numbers through the for-loop
                 # added fstring to format the text without spaces
         case 'edit':
-            number = int(input("Which todo item would you like to to edit: "))
-            # int function converts string to a number
-            number = number - 1
-            # minus 1 to account for 0
+            number = int(input("Which todo item would you like to to edit: ")) - 1
+            # int function converts string to a number, minus 1 to account for 0
             new_todo = input("Enter your new todo: ")
             # input function catches the new to do from user
             todos[number] = new_todo
             # the new to do is now appended to the list
+        case 'complete':
+            complete_item = int(input("Which todo item would you like to mark complete: ")) - 1
+            # user input for which to do item to mark complete, input is converted to int to account for 0
+            todos.pop(complete_item)
+            # pop method is used to remove the index item from the to dos list
         case 'exit':
         # third case will exit the loop
             break
